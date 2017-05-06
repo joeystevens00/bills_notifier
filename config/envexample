@@ -1,0 +1,4 @@
+GMAIL_USERNAME = 'where_the_notifications_come_from@gmail.com'
+GMAIL_PASSWORD = 'password'
+BILLS_EMAIL = 'where_the_notifications_go@gmail.com'
+BILL_NOTIFIER_ROOT_DIR='/path/to/bills_notifier'
