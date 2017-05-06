@@ -5,7 +5,17 @@ class Bills_Logger
   attr_reader :log
   def initialize(log_name, log_file, log_level)
     @log = Logging.logger[log_name]
-    @log.add_appenders Logging.appenders.stdout, Logging.appenders.file(log_file)
+    begin
+      @log.add_appenders Logging.appenders.stdout, Logging.appenders.file(log_file)
+    rescue ArgumentError => e
+      dir_name=File.dirname(log_file)
+      if File.directory?dir_name
+        puts "Failed to create the #{log_name} log."
+      else
+        Dir.mkdir(dir_name)
+        retry
+      end
+    end
     @log.level=Logging::LEVELS[log_level]
   end
 end
