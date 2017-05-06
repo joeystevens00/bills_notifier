@@ -1,0 +1,22 @@
+---
+config:
+  date_format: dmy
+  num_days_before_reminder: 1
+  time_of_reminder: 23:10
+  currency: $
+
+bills:
+  1:
+    name: Chase
+    description: |
+      The bill to Chase
+    amount: 50
+    start_date: 05-05-2017
+    frequency: weekly
+  2:
+    name: Duke Energy
+    description: |
+      The power bill
+    amount: 200
+    start_date: 02-02-2017
+    frequency: monthly
