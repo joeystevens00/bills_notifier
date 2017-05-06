@@ -1,2 +1,4 @@
-log/*
 config/.env
+.idea/
+ log/
+ nohup.out
