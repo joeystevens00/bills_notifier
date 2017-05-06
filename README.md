@@ -15,10 +15,10 @@ config:
   currency: $
  ```
 
-_date_format_ : The format that dates in the YAML file use (d=day, m=month, y=year)
-_num_days_before_reminder_ : The number of days before the bill's due date when the email will be sent
-_time_of_reminder_ : The time of day that the reminders will be sent at.
-_currency_ : The currency symbol used that bill amount represents.
+_date_format_ : The format that dates in the YAML file use (d=day, m=month, y=year)  
+_num_days_before_reminder_ : The number of days before the bill's due date when the email will be sent  
+_time_of_reminder_ : The time of day that the reminders will be sent at.  
+_currency_ : The currency symbol used that bill amount represents.  
 
 ### Bills
 
