@@ -3,5 +3,4 @@ source 'https://rubygems.org' do
   gem 'gmail'
   gem 'whenever'
   gem 'logging'
-  gem 'yaml'
 end
