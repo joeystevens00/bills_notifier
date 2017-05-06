@@ -38,7 +38,7 @@ bills:
 _name_ : The name of the bill   
 _description_ : A description of the bill    
 _amount_ : The cost of the bill   
-_start_date_ : An example due date of the bill. The format should match the format specified in date_format
+_start_date_ : An example due date of the bill. The format should match the format specified in date_format   
 _frequency_ : The frequency that the bill occurs (weekly or monthly)
 
 ## Env variables
