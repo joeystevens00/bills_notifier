@@ -32,7 +32,7 @@ class Send_Email
   end
 end
 
-logger = Bills_Logger.new('SEND_EMAIL', 'log/send_email.log', 'debug')
+logger = BillsLogger.new('SEND_EMAIL', 'log/send_email.log', 'debug')
 x = Send_Email.new
 if ARGV[0]
   begin

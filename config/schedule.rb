@@ -23,8 +23,8 @@ require_relative '../lib/bills_serializer'
 require_relative '../lib/send_email'
 require 'dotenv'
 Dotenv.load('config/.env')
-logger = Bills_Logger.new('Scheduler', 'log/scheduler.log', 'debug')
-bills = Bills_Serializer.new('config/bills.yaml').get_bills
+logger = BillsLogger.new('Scheduler', 'log/scheduler.log', 'debug')
+bills = BillsSerializer.new('config/bills.yaml').get_bills
 
 bills.each do |id, bill|
   root_dir=ENV['BILL_NOTIFIER_ROOT_DIR']
@@ -34,7 +34,6 @@ bills.each do |id, bill|
   cron=bill[:cronjob]
   in_days=bill[:in_days]
   every cron do
-     command "cd #{root_dir} && ruby lib/send_email.rb '#{to_email}' '#{name} bill is due soon!' 'You need to pay #{name} in the amount of #{amount_currency} in #{in_days} day(s).'"
-    # command "echo 'You need to pay #{name} in the amount of #{amount_currency} in #{in_days} day(s).'"
+    command "cd #{root_dir} && ruby lib/send_email.rb '#{to_email}' '#{name} bill is due soon!' 'You need to pay #{name} in the amount of #{amount_currency} in #{in_days} day(s).'"
   end
 end

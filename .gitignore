@@ -3,3 +3,4 @@ config/.env
 .idea/*
  log/
  nohup.out
+ config/bills-r.yaml

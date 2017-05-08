@@ -1,8 +1,9 @@
 ---
 config:
   date_format: dmy
+  time_notation: 12
   num_days_before_reminder: 1
-  time_of_reminder: 23:10
+  time_of_reminder: 5:50 PM
   currency: $
 
 bills:
